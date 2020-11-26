@@ -1,0 +1,18 @@
+#include<stdio.h>
+//declare function
+void func(void);
+static int count = 5;   // global variables
+main(){
+    while (count--)
+    {
+        func();
+    }
+    
+    return 0;
+}
+
+void func(void){
+    static int i = 5;   //local static variables
+    i++;
+    printf("i is %d and count is %d\n",i,count);
+}
